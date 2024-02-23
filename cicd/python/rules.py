@@ -20,7 +20,7 @@ def get_http_client_from_file(service_account_file):
   return requests.AuthorizedSession(credentials)
 
 def get_http_client_from_sa_info(service_account_info):
-  service_account_info = os.environ.get("SA_CREDENTIAL", "Not Found")
+  # service_account_info = os.environ.get("SA_CREDENTIAL", "Not Found")
   # Create a credential using Google Developer Service Account Credential and Chronicle API scope.
   credentials = service_account.Credentials.from_service_account_info(json.loads(service_account_info), scopes=SCOPES)
   # Build an HTTP client to make authorized OAuth requests.
